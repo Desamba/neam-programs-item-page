@@ -1,0 +1,60 @@
+{% include 'bgcolor_banner_global' %}
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    {
+          "type": "richtext",
+          "id": "s1_heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "s1_subheading",
+          "label": "Subheading"
+        },
+        {
+          "type": "color",
+          "id": "s1_bg_color",
+          "label": "Background Color"
+        },
+        {
+          "type": "image_picker",
+          "id": "s1_bg_img",
+          "label": "Background Image",
+          "info": "960x960px"
+        },
+        {
+          "type": "text",
+          "id": "s1_firstbtn_label",
+          "label": "Button 1 Label"
+        },
+        {
+          "type": "url",
+          "id": "s1_firstbtn_url",
+          "label": "Button 1 Url"
+        },
+        {
+         "type": "checkbox",
+         "id": "add_arrow_down",
+         "label": "Add arrow down",
+         "default": false
+        },
+        {
+         "type": "url",
+         "id": "arrow_down_url",
+       "label": "Arrow down URL"
+        }
+  ]
+}
+{% endschema %}
+
+
+ 
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
