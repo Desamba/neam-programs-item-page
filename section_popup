@@ -1,0 +1,142 @@
+<!--  popup starts -->
+<div class="micromodal" id="modal-trip" aria-hidden="true">
+  <div class="modal__overlay position-fixed d-flex justify-content-center align-items-center" tabindex="-1" data-micromodal-close>
+    <div class="modal__container position-relative" role="dialog" aria-modal="true" aria-labelledby="modal-inquire-title">
+      <header class="modal__header position-absolute">
+        <button class="modal__close p-0 d-block ml-auto" aria-label="Close modal" data-micromodal-close>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'>
+            <path d='M22.4 19l15-15A2.4 2.4 0 1033.8.8L19 15.7 4 .6A2.4 2.4 0 10.8 4.1l15 14.9-15 15a2.4 2.4 0 103.4 3.3l14.9-15 15 15a2.4 2.4 0 001.6.7 2.4 2.4 0 001.7-4l-15-15z' />
+          </svg>
+          <span class="sr-only">Close</span>
+        </button>
+      </header>
+      <main class="modal__content " id="modal-trip-content">
+         
+        <div class="modal__text w-100 text-left">
+          <div>
+            
+            
+            <div class="product_tab_head text-center">
+              <!--<p class="mt-3 mb-0 text-uppercase product_tab_style font-family-gotham">Free Shipping on US orders over $35</p>-->
+              <div class="text-100 font-family-roboto text-large line-height-100 text-white text-uppercase tab_head_style" id="modal-trip-title">{{ section.settings.popup_header}}</div>
+              <div class="text-small text-white text-uppercase tab_body_style">{{ section.settings.popup_description }}</div>
+            </div>
+            <div style="margin:0 auto;" class="pxFormGenerator" id="jEo7o9Px74aaPTeUsR3L0A"></div>	
+            <p>{{ section.settings.popup_content }}<p>
+            
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+<!-- popup ends -->
+
+<!--  popup starts -->
+<div class="micromodal" id="modal-visitor" aria-hidden="true">
+  <div class="modal__overlay position-fixed d-flex justify-content-center align-items-center" tabindex="-1" data-micromodal-close>
+    <div class="modal__container position-relative" role="dialog" aria-modal="true" aria-labelledby="modal-inquire-title">
+      <header class="modal__header position-absolute">
+        <button class="modal__close p-0 d-block ml-auto" aria-label="Close modal" data-micromodal-close>
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'>
+            <path d='M22.4 19l15-15A2.4 2.4 0 1033.8.8L19 15.7 4 .6A2.4 2.4 0 10.8 4.1l15 14.9-15 15a2.4 2.4 0 103.4 3.3l14.9-15 15 15a2.4 2.4 0 001.6.7 2.4 2.4 0 001.7-4l-15-15z' />
+          </svg>
+          <span class="sr-only">Close</span>
+        </button>
+      </header>
+      <main class="modal__content " id="modal-visitor-content">
+         
+        <div class="modal__text w-100 text-left">
+          <div>
+            
+            
+            <div class="product_tab_head text-center">
+              <!--<p class="mt-3 mb-0 text-uppercase product_tab_style font-family-gotham">Free Shipping on US orders over $35</p>-->
+              <div class="text-100 font-family-roboto text-large line-height-100 text-white text-uppercase tab_head_style" id="modal-visitor-title">{{ section.settings.popup2_header}}</div>
+              <div class="text-small text-white text-uppercase tab_body_style">{{ section.settings.popup2_description }}</div>
+            </div>
+            <div style="margin:0 auto;" class="pxFormGenerator" id="xXxjk1GMT3mCFeoc62hWRA"></div>	
+            <p>{{ section.settings.popup2_content }}<p>
+            
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+<!-- popup ends -->
+
+<script type="text/javascript">
+  $('a[href*="open-modal-trip"]').attr('data-micromodal-trigger', 'modal-trip');
+$('a[href*="open-modal-visitor"]').attr('data-micromodal-trigger', 'modal-visitor');
+</script>
+
+<style>
+     /*form and popup*/
+  .product_tab_head {
+    background: #1e1e1e;
+    padding-top: 3em;
+}
+  .tab_head_style {
+    margin-bottom:2rem;
+  }
+  .tab_body_style{
+  padding-bottom:3rem;
+  }
+  .modal__close path {
+    fill: #fff;
+}
+  
+ .pxFormGenerator {
+    width: 600px;
+    background: #fff;
+    padding: 10px 40px;
+}
+@media only screen and (max-width: 749px) {
+  .pxFormGenerator {
+    width: auto;
+    padding: 5px;
+  }
+}
+</style>
+{% schema %}
+  {
+    "name": "Popup",
+    "settings": [
+{
+          "type": "header",
+          "content": "Plan Trip Popup"
+        },
+        {
+          "type": "richtext",
+          "id": "popup_header",
+          "label": "Popup Header"
+        },
+        {
+          "type": "richtext",
+          "id": "popup_description",
+          "label": "Popup description"
+        },
+{
+          "type": "header",
+          "content": "Contact Visitor Services Popup"
+        },
+        {
+          "type": "richtext",
+          "id": "popup2_header",
+          "label": "Popup Header"
+        },
+        {
+          "type": "richtext",
+          "id": "popup2_description",
+          "label": "Popup description"
+        }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
