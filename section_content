@@ -1,0 +1,129 @@
+{% include 'program_cont_global' %}
+
+{% schema %}
+  {
+    "name": "Content",
+    "settings": [
+{
+          "type": "text",
+          "id": "header",
+          "label": "Header"
+        },
+        {
+          "type": "color",
+          "id": "bg",
+          "label": "Background color",
+          "default": "#ffffff"
+        }
+],
+  "blocks": [
+     {
+      "type": "item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "program_item_head",
+          "label": "Program title"
+        },
+        {
+          "type": "richtext",
+          "id": "program_item_desc",
+          "label": "Program description"
+        },
+        {
+          "type": "richtext",
+          "id": "program_item_info",
+          "label": "Program Info"
+        },
+        {
+          "type": "text",
+          "id": "program_item_cta_label",
+          "label": "Button Label",
+          "default": "PLAN TRIP"
+        },
+        {
+          "type": "url",
+          "id": "program_item_cta_url",
+          "label": "Button Url"
+        },
+        {
+          "type": "image_picker",
+          "id": "program_item_image",
+          "label": "Image"
+        }
+      ]
+    },
+{
+      "type": "title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "program_item_head",
+          "label": "Program title"
+        }
+      ]
+    },
+{
+      "type": "description",
+      "name": "Description",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "program_item_desc",
+          "label": "Program description"
+        }
+      ]
+    },
+{
+      "type": "info",
+      "name": "Info",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "program_item_info",
+          "label": "Program Info"
+        }
+      ]
+    },
+{
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "program_item_cta_label",
+          "label": "Button Label",
+          "default": "PLAN TRIP"
+        },
+        {
+          "type": "url",
+          "id": "program_item_cta_url",
+          "label": "Button Url"
+        }
+      ]
+    },
+{
+      "type": "image",
+      "name": "Image",
+      "settings": [
+       {
+          "type": "image_picker",
+          "id": "program_item_image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+
+
+ 
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
