@@ -1,0 +1,107 @@
+<div class="page-width prog__slider_wrapper position-relative">
+  <div class="prog__slider">
+    {% for block in section.blocks %}
+    <div class="grid__item medium-up--one-whole text-center featured__prog">
+      <img class="feature-prog__img" src="{{ block.settings.prog_image | img_url: 'x1024' }}">
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+	{
+      "name": "Slider",
+      "settings": [],
+      "blocks": [
+		{
+          "type": "text",
+          "name": "Image",
+          "settings": [
+		{
+          "type": "image_picker",
+          "id": "prog_image",
+          "label": "Image",
+          "info": "455x300px"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+ <!--<script src="//cdn.shopify.com/s/files/1/0231/6481/3376/t/5/assets/jquery-2.2.3.min.js?v=5821186314690718683" type="text/javascript"></script>-->
+
+ 
+
+
+<!-- end div nest -->
+
+<style>
+  .prog__slider_wrapper {
+    margin-top:-30px;
+    z-index:99 !important;
+        max-width: 90%;
+  }
+  .prog__slider {
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+     
+}
+  img.feature-prog__img {
+    margin: 0 auto;
+    
+}
+  .prog__slider .slick-list {
+    padding: 0 !important;
+    overflow: visible;
+}
+  @media only screen and (min-width: 1200px) {
+    img.feature-prog__img {
+   max-width: 100%;
+}
+    .prog__slider_wrapper {
+    margin-top: -30px;
+      max-width: 80%;
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+     .prog__slider_wrapper {
+    margin-top:-30px;
+    }
+  }
+</style>
+ 
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.prog__slider').slick({
+      dots: true,
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 2500,
+      adaptiveHeight: false,
+      centerMode: true,
+      pauseOnHover:true,
+      variableWidth: false,
+      responsive: [
+        {
+          breakpoint: 749,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+    //$('.logo_grid').slick('refresh');
+  });
+</script>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
